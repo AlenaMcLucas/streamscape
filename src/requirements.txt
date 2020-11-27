@@ -1,7 +1,9 @@
+# pip install -r src/requirements.txt
+
 igdb-api-v4
 selenium
 bs4
 beautifulsoup4
 requests
-# slackclient
-slack
+slackclient
+# slack

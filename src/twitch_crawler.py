@@ -5,7 +5,7 @@ import json
 
 from selenium import webdriver
 from bs4 import BeautifulSoup
-from google.cloud import pubsub_v1
+# from google.cloud import pubsub_v1
 
 
 PAUSE_TIME = 3   # Allow 3 seconds for the web page to load
@@ -13,18 +13,18 @@ PROJECT_ID = "pol-pipe"   # GCP project id
 driver = webdriver.Chrome(executable_path=r"/Users/alenamclucas/Documents/WebDriver/chromedriver")
 
 
-def publish(messages, topic_id):
-    """Publish data to my specific Google Pub/Sub topic.
-
-    Parameters
-    ----------
-    messages : ?
-    topic_id : ?
-    """
-    publisher = pubsub_v1.PublisherClient()
-    topic_path = publisher.topic_path(PROJECT_ID, topic_id)
-    for message in messages:
-        future = publisher.publish(topic_path, data=message.encode('utf-8'))
+# def publish(messages, topic_id):
+#     """Publish data to my specific Google Pub/Sub topic.
+#
+#     Parameters
+#     ----------
+#     messages : ?
+#     topic_id : ?
+#     """
+#     publisher = pubsub_v1.PublisherClient()
+#     topic_path = publisher.topic_path(PROJECT_ID, topic_id)
+#     for message in messages:
+#         future = publisher.publish(topic_path, data=message.encode('utf-8'))
 
 
 def parse_viewers(view):

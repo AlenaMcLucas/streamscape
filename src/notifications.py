@@ -2,8 +2,10 @@
 
 from slack import WebClient
 
+import util
 
-SLACK_BOT_TOKEN = 'xoxb-1508191575730-1493530643479-RU5rrOo3VoBGg3jsu9ShmCI1'
+
+SLACK_BOT_TOKEN = util.parse_slack_token()
 
 
 def slack_message(message):

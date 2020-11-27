@@ -6,3 +6,5 @@ venv/
 
 docs/*
 !docs/conf.py
+
+src/tokens/

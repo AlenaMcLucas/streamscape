@@ -8,10 +8,10 @@ import sys
 from igdb.wrapper import IGDBWrapper   # from igdb-api-v4
 
 from notifications import slack_message
+import util
 
 
-CLIENT_ID = 'qhss7wh9xgkbtnb5l3c3383vp9lqhv'
-CLIENT_SECRET = 'fba7l0yb1icsrx2t8bvex4ucgdjmce'
+CLIENT_ID, CLIENT_SECRET = util.parse_igdb_ids()
 access_token = ''
 
 
